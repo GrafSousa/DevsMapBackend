@@ -1,3 +1,13 @@
+import { Router } from 'express';
+
+import DevController from './controllers/DevController';
+
+const routes = new Router();
+
+routes.post('/devs', DevController.store);
+
+export default routes;
+
 // Métodos HTTP: GET, POST, PUT, DELETE
 
 // Tipos de parâmetros:
@@ -20,13 +30,3 @@
   -> Utilizado principalmente nos métodos POST e PUT
   -> Dados para criação ou alteração de um registro
 */
-
-import { Router } from 'express';
-
-const routes = new Router();
-
-routes.get('/', (req, res) => {
-  return res.json({ message: 'Hello Omnistack' });
-});
-
-export default routes;
